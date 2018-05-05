@@ -53,13 +53,12 @@
             <textarea name="messageq" rows="5" id="messageq"></textarea>
           </p>
           <p class="full">
-            <button id="mybtn" onclick="update()">Update</button>
+            <button type="submit" onclick="myfunction()">Update</button>
           </p>
         </form>
       </div>
     </div>
   </div>
-    
 
 <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 <script>
@@ -73,28 +72,7 @@
     messagingSenderId: "116212207158"
   };
   firebase.initializeApp(config);
-
-  function update(){
-  var a = parseInt(document.getElementById('checkq').value);
-  var b = document.getElementById('headq').value;
-  var c = document.getElementById('titq').value;
-  var d = parseInt(document.getElementById('tsq').value);
-  var e = parseInt(document.getElementById('msq').value);
-  var f = document.getElementById('messageq').value;
-  /*window.alert(a); window.alert(f);
-  firebase.database().ref().child("Check").set(a);
-  firebase.database().ref().child("Head").set(b);
-  firebase.database().ref().child("Title").set(c);
-  firebase.database().ref().child("TitleFS").set(d);
-  firebase.database().ref().child("MessageFS").set(e);
-  firebase.database().ref().child("Message").set(f); 
-  window.alert("Completed");
-  */
-
-  var mydb = firebase.database().ref();
-  mydb.child("New Branch").child("New").set("Value");
-}
-
 </script>
+ <script type="text/javascript" src="javascript.js"></script>
 </body>
 </html>
